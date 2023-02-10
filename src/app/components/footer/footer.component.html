@@ -1,0 +1,73 @@
+ <!-- =========================== Footer ======================================== -->
+<footer id="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+
+        <!---------------Logo y redes sociales--------------------------->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-info">
+            <div class="logo">
+              <img src="/assets/img/logo/logoCentSalud.png" class="logo">
+              <div class="social-links mt-3">
+                <a href="#" class="facebook"><img
+                    src="assets/img/icons/facebook.svg" class="footer__img"></a>
+                <a href="#" class="twitter"><img
+                    src="assets/img/icons/twitter.svg" class="footer__img"></a>
+                <a href="#" class="instagram"><img
+                    src="assets/img/icons/instagram.svg" class="footer__img"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!---------------Fin Logo y redes sociales--------------------------->
+        <!-----------------------Contactenos--------------------------------->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-info">
+            <h3>{{contactenos1}}</h3>
+            <div *ngFor="let contacto of contactenos">
+              <p><strong>Telefono:</strong>{{contacto.telefono}}<br></p>
+              <p><strong>WhatsApp:</strong>{{contacto.whatsapp}}<br></p>
+              <p><strong>Correo:</strong>{{contacto.correo}}<br></p>
+              <p><strong>Sede:</strong>{{contacto.sede}}<br></p>
+            </div>
+          </div>
+        </div>
+        <!--------------------Fin Contactenos--------------------------------->
+        
+        <!-----------------------Escribenos----------------------------------->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-info">
+            <h3>{{escribenos}}</h3>
+            <form class="form-row">
+              <div class="form-group col-md-12">
+                <textarea id="comentario" name="comentario" rows="4" cols="50"
+                  id="comentario" placeholder="Escribe aquí tu comentario"
+                  class="form-control" #comentario="ngModel"
+                  [(ngModel)]="comentarioInput"
+                  [ngClass]="{'is-invalid': comentario.errors &&
+                  comentario.touched}" required>
+                </textarea>
+                <div [hidden]="!comentario.errors?.['required']"
+                  class="invalid-feedback">
+                  Campo requerido</div>
+              </div><p></p>
+              <div class="col"><p></p>
+                <button type="submit" class="btn
+                  btn-primary"(click)="agregarComentario()">
+                  Enviar</button></div>
+            </form></div>
+        </div>
+      </div>
+      <!-----------------------Fin escribenos----------------------------------->
+    </div>
+  </div>
+  <!---------------------------Copyright---------------------------------------->
+  <div class="container"><div class="copyright">
+      Copyright &copy;{{copy}}. <strong><span>{{empresa}}</span></strong>.
+      Todos los derechos reservados
+    </div>
+  </div>
+  <!---------------------------Fin Copyright---------------------------------------->
+</footer>
+<!-- ============================= Fin Footer ======================================== -->

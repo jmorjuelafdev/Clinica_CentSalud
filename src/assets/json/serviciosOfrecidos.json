@@ -1,0 +1,78 @@
+[
+  {
+    "descripcion_esp": "Nuestras especialidades",
+    "especialidades": [
+      {
+        "nombre_servicio": "Psicología",
+        "icono": "psicologia.ico"
+      },
+      {
+    "nombre_servicio": "Odontología",
+    "icono": "odontologia.ico"
+      },
+      {
+        "nombre_servicio": "Dermatología",
+        "icono": "dermatologia.ico"
+      },
+      {
+        "nombre_servicio": "Pediatría",
+        "icono": "pediatria.ico"
+      },
+      {
+        "nombre_servicio": "Medicina interna",
+        "icono": "medicina.ico"
+      },
+      {
+        "nombre_servicio": "Enfermería",
+        "icono": "enfermeria.ico"
+      },
+      {
+        "nombre_servicio": "Cardiología",
+        "icono": "cardiologia.ico"
+      },
+      {
+        "nombre_servicio": "Otros Servicios",
+        "ruta":"./servicios/especialidades",
+        "icono": "otros1.ico"
+      }
+    ]
+  },
+  {
+    "descripcion_proc": "Nuestros Procedimientos",
+    "procedimientos": [
+      {
+        "nombre_servicio": "Ecocardiogramas",
+        "icono": "ecocardiograma.ico"
+      },
+      {
+        "nombre_servicio": "Terapias físicas",
+        "icono": "fisioterapia.ico"
+      },
+      {
+        "nombre_servicio": "Electrocardiogramas",
+        "icono": "electrocardiograma.ico"
+      },
+      {
+        "nombre_servicio": "Ecografías",
+        "icono": "ecografia.ico"
+      },
+      {
+        "nombre_servicio": "Rayos X",
+        "icono": "rayosx.ico"
+      },
+      {
+        "nombre_servicio": "Holter",
+        "icono": "holter.ico"
+      },
+      {
+        "nombre_servicio": "Espirometría",
+        "icono": "espirometria.ico"
+      },
+      {
+        "nombre_servicio": "Otros Servicios",
+        "ruta":"./servicios/especialidades",
+        "icono": "otros2.ico"
+      }
+    ]
+  }
+]

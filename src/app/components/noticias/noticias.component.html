@@ -1,0 +1,28 @@
+<body>
+  <p></p>
+  <div class="container">
+    <div class="titulo">
+      <p><strong>{{title}}</strong> </p>
+    </div>
+  </div>
+  <!--=====Sección mosaico noticias con mat-card====-->
+  <section>
+    <div class="page-container" style="text-align: center;">
+      <div class="chains">
+        <mat-card *ngFor="let noticia of noticias" class="mat-elevation-z7">
+          <img mat-card-image src="assets/img/noticias/{{noticia.imagenTitular}}" class="img">
+          <mat-card-title>
+            {{noticia.tituloNoticia}}
+          </mat-card-title>
+          <mat-card-content>
+            <p>
+              <a routerLink="/subnoticias/{{noticia.tituloNoticia}}"><!--Ruta para ver info de noticias-->
+                {{noticia.descripcion_corta}}</a></p>
+          </mat-card-content>
+          <mat-card-subtitle>{{noticia.fecha}}</mat-card-subtitle>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+  <!--=====Fin Sección mosaico noticias con mat-card====-->
+</body>

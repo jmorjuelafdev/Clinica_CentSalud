@@ -1,0 +1,18 @@
+  <!--=====Header pestaña con tabs====-->
+<header>
+  <nav mat-tab-nav-bar mat-align-tabs="center">
+  <a mat-tab-link
+  class="logo"
+  [routerLink]="'/inicio'">
+ <img src="/assets/img/logo/logoCentSalud.png">
+</a>
+  <a mat-tab-link *ngFor="let link of links; index as i"
+     [routerLink]="link"
+     (click)="activeLink = link"
+     [active]="activeLink == link"> {{menu[i]}} </a>
+</nav>
+<div>
+  <router-outlet></router-outlet>
+</div>
+</header>
+  <!--=====Fin header pestaña tabs====-->

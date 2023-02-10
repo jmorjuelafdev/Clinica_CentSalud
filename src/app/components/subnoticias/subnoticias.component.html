@@ -1,0 +1,105 @@
+<body>
+  <p></p>
+  <div class="container">
+    <div class="titulo">
+      <p><strong>{{title}}</strong> </p>
+    </div>
+  </div>
+
+  <!-- =======Sección imagenTitular, tituloNoticia, noticia======= -->
+  <section class="noticia">
+    <div class="container">
+      <div class="container col-lg-7 pt-lg-5"></div>
+      <div class="row">
+        <div class="container col-lg-6 pt-4 pt-lg-0 content">
+          <img src="assets/img/noticias/{{noticiaSeleccionada?.imagenTitular}}"
+            class="img-fluid">
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0 content" style="text-align: justify;">
+          <div class="subtitulo"><p><strong>{{noticiaSeleccionada?.tituloNoticia}}</strong></p></div>
+          <p>{{noticiaSeleccionada?.noticia}}
+          </p>
+        </div>
+        <div class="container">
+          <div class="col-lg-12 pt-4 pt-lg-4 content" style="text-align:
+            justify;">
+            <p>{{noticiaSeleccionada?.segundo_parrafo}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- =======Fin Sección imagenTitular, tituloNoticia, noticia=======-->
+
+
+  <!-- ==============Sección comentarios===================================-->
+  <section class="comentarios">
+    <div class="container">
+      <div class="col-lg-12 pt-4 pt-lg-4 content">
+        <div class="subtitulo"><p><strong>{{subtitle}}</strong></p></div>
+      </div>
+      <p></p>
+      <!----------------------Visualización de los datos ingresados-------------------------->
+      <div id="cuerpo_comentarios">
+        <div class="row">
+          <div class="col">
+            <div *ngFor="let comentario of comentarios; let i= index">
+              <p><b>{{comentario.nombre}}</b></p>
+              <p>{{comentario.comentario}}</p><!--Nuevos comentarios-->
+
+            </div>
+          </div>
+        </div>
+        <div *ngFor="let comentario of noticiaSeleccionada?.comentarios; let i=
+          index">
+          <p><b>{{comentario.nombre}}</b></p>
+          <p>{{comentario.comentario}}</p><!--Lista de comentarios existente-->
+        </div>
+      </div>
+      <!----------------------Fin visualización de los datos ingresados------------------------->
+      <p></p>
+
+      <!----------------------Formulario para agregar comentarios-------------------------------->
+      <form class="form-row">
+        <div class="form-group col-md-2">
+          <label for="nombre" class="sr-only">Nombre:</label>
+          <input type="text" name="nombre" id="nombre" placeholder="Nombre"
+            class="form-control"
+            #nombre="ngModel" [(ngModel)]="nombreInput"
+            [ngClass]="{'is-invalid': nombre.errors &&
+            nombre.touched}" required>
+          <div [hidden]="!nombre.errors?.['required']" class="invalid-feedback">
+            Campo requerido
+          </div>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="comentario" class="sr-only">Comentario:</label>
+          <textarea id="comentario" name="comentario" rows="4" cols="50"
+            id="comentario" placeholder="Escribe aquí tu comentario"
+            class="form-control"
+            #comentario="ngModel" [(ngModel)]="comentarioInput"
+            [ngClass]="{'is-invalid': comentario.errors &&
+            comentario.touched}" required>
+          </textarea>
+          <div [hidden]="!comentario.errors?.['required']"
+            class="invalid-feedback">
+            Campo requerido
+          </div>
+        </div>
+        <p></p>
+        <div class="col">
+          <button type="submit" class="btn btn-primary"
+            (click)="agregarComentario()">
+            Comentar </button>
+            
+        </div>
+      </form>
+      <!----------------------Fin formulario para agregar comentarios------------------------------->
+      <div class="container">
+        <p></p>
+      </div>
+    </div>
+  </section>
+  <!-- =========================Fin Sección comentarios======================================-->
+</body>

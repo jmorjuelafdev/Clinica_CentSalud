@@ -1,0 +1,26 @@
+<p></p>
+<div class="container">
+  <div class="titulo">
+    <p><strong>{{title}}</strong> </p>
+  </div>
+</div>
+<!--=====Sección mosaico sedes con mat-card====-->
+<section>
+  <div class="page-container">
+    <div class="chains">
+      <ng-container *ngFor="let noticia of noticias">
+        <mat-card *ngIf="noticia.item1 || noticia.item2 ||noticia.item3" 
+          class="mat-elevation-z7"> <!--Condicional para mostrar solo fechas recientes-->
+          <img mat-card-image src="assets/img/noticias/{{noticia.imagenTitular}}">
+          <mat-card-title>{{noticia.tituloNoticia}}</mat-card-title>
+          <mat-card-content><p>
+              <a routerLink="/subnoticias/{{noticia.tituloNoticia}}"><!--Ruta para ver info de noticias-->
+                {{noticia.descripcion_corta}}</a></p>
+          </mat-card-content>
+          <mat-card-subtitle>{{noticia.fecha}}</mat-card-subtitle>
+        </mat-card>
+      </ng-container>
+    </div>
+</div>
+</section>
+<!--=====Fin Sección mosaico sedes con mat-card====-->

@@ -1,0 +1,22 @@
+
+ <body>
+<div class="container" style="height:64px"></div>
+  <!--=========Sección mosaico especialidades ========-->
+<section class="especialidades">
+  <div class="container">
+    <div *ngFor="let especialidad of especialidades" class="principal">
+      <div *ngFor="let especialidad of especialidad.especialidades" class="wrapper" >
+        <img src="assets/img/icons/{{especialidad.icono}}" width="64px"
+            class="ico">
+          <p> 
+            <button mat-flat-button routerLink="/servicios/subespecialidades/{{especialidad.nombre_servicio}}">
+              {{especialidad.nombre_servicio}}</button></p>
+      </div>
+    </div>
+  </div>
+<div>
+  <router-outlet></router-outlet>
+</div>
+</section>
+  <!--=========Fin sección mosaico especialidades ========-->
+</body> 

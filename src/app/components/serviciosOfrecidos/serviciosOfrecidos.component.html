@@ -1,0 +1,28 @@
+<!--=====Sección especialidades inicio ====-->
+<section class="serviciosOfrecidos">
+  <div class="container">
+    <div *ngFor="let especialidad of especialidades" class="titulo">
+      {{especialidad.descripcion_esp}}
+    </div>
+    <div *ngFor="let especialidad of especialidades" class="principal">
+      <div *ngFor="let especialidad of especialidad.especialidades"
+        class="wrapper">
+        <img src="assets/img/icons/{{especialidad.icono}}" width="64px"
+          class="ico"><p>
+
+          <!--Si el nombre de servicios es diferente de "otros servicios"-->
+          <button *ngIf="especialidad.nombre_servicio != 'Otros Servicios'"
+            mat-flat-button
+            routerLink="/servicios/subespecialidades/{{especialidad.nombre_servicio}}">
+            {{especialidad.nombre_servicio}}</button>
+            
+          <!--Si el nombre de servicios es igual a "otros servicios-->
+          <button *ngIf="especialidad.nombre_servicio === 'Otros Servicios'"
+            mat-flat-button routerLink="/servicios/especialidades/">{{especialidad.nombre_servicio}}
+          </button>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!--=====Fin sección especialidades inicio ====-->

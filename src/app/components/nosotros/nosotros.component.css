@@ -1,0 +1,42 @@
+/***============= Para toda la página================*/
+.titulo {
+  font-size: 36px;
+  text-align: center;
+  color: #72bb53;
+  font-family: Zapf Chancery, cursive;
+  text-shadow: 0px 3px 3px rgba(255,255,255,0.4),0px -1px 1px rgba(0,0,0,0.3);
+}
+/***======= Sección descripción y pie de foto ===========*/
+.box {
+  position: absolute;
+  top: 433px;
+  left: 30;
+  height: 50px;
+  width: 20%;
+  padding: 10px;
+  background-color: #ffa834;
+  text-align: center;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+#descripcion {
+  text-align: justify;
+}
+
+/***======= Sección valores corporativos ===========*/
+ul {
+  list-style: none;
+}
+#valores {
+  background-color: #72bb53;
+  width: 280px;
+}
+.lista {
+  color: #fff;
+}
+
+.container col-lg-5 {
+  position: relative;
+  width: 100%;
+}

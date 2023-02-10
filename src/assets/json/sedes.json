@@ -1,0 +1,30 @@
+[
+  {
+    "sedes": [
+      {
+        "nombre_sede": "Sede Montería",
+        "icono": "Monteria.jpg"
+      },
+      {
+        "nombre_sede": "Sede Cartagena",
+        "icono": "Cartagena.jpg"
+      },
+      {
+        "nombre_sede": "Sede Honda - Tolima",
+        "icono": "Honda.jpg"
+      },
+      {
+        "nombre_sede": "Sede Ibagué",
+        "icono": "Ibague.jpg"
+      },
+      {
+        "nombre_sede": "Sede Líbano - Tolima",
+        "icono": "Libano.jpg"
+      },
+      {
+        "nombre_sede": "Sede Bogotá",
+        "icono": "Bogota.jpg"
+      }
+    ]
+  }
+]

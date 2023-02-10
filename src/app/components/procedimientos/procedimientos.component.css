@@ -1,0 +1,29 @@
+/**--=====Sección mosaico procedimientos ====-->*/
+.principal {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+.principal div {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-family: Zapf Chancery, cursive;
+  background: radial-gradient(circle, #d7f3cb 0%, #ffff 100%);
+}
+.mat-flat-button {
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 15px;
+  font-weight: bolder;
+  font-family: Zapf Chancery, cursive;
+}
+.mat-flat-button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 18px;
+  color: #ffa834;
+  font-weight: bolder;
+  font-family: Zapf Chancery, cursive;
+}

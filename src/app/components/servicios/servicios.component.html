@@ -1,0 +1,43 @@
+<body>
+  <!--=====Sección pestaña servicios ====-->
+  <section>
+    <nav mat-tab-nav-bar mat-align-tabs="center">
+      <a mat-tab-link *ngFor="let tab of tabs"
+        [routerLink]="tab.ruta"
+        (click)="activeLink= tab"
+        [active]="activeLink == tab">{{tab.tab}}</a><!--Los tabs y sus rutas-->
+    </nav>
+    <p></p>
+    <div class="container">
+      <div class="titulo">
+        <p><strong>{{title}}</strong> </p>
+      </div>
+    </div>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </section>
+  <!--=====Fin sección pestaña servicios ====-->
+
+  <!-- ======= Sección aviso ======= -->
+  <section id="cta" class="cta">
+    <div class="container" data-aos="zoom-in">
+      <div class="text-center">
+        <h3>{{subtitle1}}</h3>
+        <h4>{{subtitle2}}</h4>
+        <div class="about__main">
+          <article class="ico">
+            <img src="assets/img/icons/servicios1.ico" class="ico1">
+          </article>
+          <article class="ico">
+            <img src="assets/img/icons/servicios2.ico" class="ico1">
+          </article>
+          <article class="ico">
+            <img src="assets/img/icons/servicios3.ico" class="ico1">
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ======= Fin sección aviso ======= -->
+</body>

@@ -1,0 +1,172 @@
+<body>
+  <p></p>
+  <div class="container">
+    <div class="titulo">
+      <p><strong>{{title}}</strong> </p>
+    </div>
+  </div>
+
+  <!--===== Sección descripción, imagen y contactos sede====-->
+  <section class="servicios">
+    <!--------------------Imágen en tarjeta----------------------------->
+    <div class="container col-lg-12 pt-lg-4">
+      <div class="row"  style="text-align: justify;">
+        <div class="col-lg-4 pt-4 pt-lg-12" >
+          <mat-card class="mat-elevation-z7" style="text-align: justify;">
+              <img mat-card-image
+                src="assets/img/sedes/{{sedeSeleccionada?.icono}}"
+                width="128px"
+                class="img"><p>
+                <mat-card-content>
+                  <p class="nombre-icono"><strong>{{sedeSeleccionada?.nombre_sede}}</strong>
+                  </p>
+                </mat-card-content>
+            </mat-card>
+          </div>
+          <!--------------------Fin imágen en tarjeta----------------------------->
+
+          <!--------------------Descripción--------------------------------------->
+          <div class="col-lg-4 pt-4 pt-lg-4 content aos-init aos-animate">
+            <div class="descripcion" style="text-align: justify;">
+              <p>{{sedeSeleccionada?.descripcion}}</p>
+            </div>
+          </div>
+          <!--------------------Fin descripción--------------------------------------->
+          
+          <!--------------------Contáctenos con objeto--------------------------------------->
+          <div class="col-lg-4 pt-4 pt-lg-4 content aos-init aos-animate">
+            <div class="contactenos" style="text-align: justify;">
+              <div class="container">
+                <div class="titulo">
+                  <p><strong>Contáctenos</strong> </p>
+                </div>
+              </div>
+              <div *ngFor="let sede of sedeSeleccionada?.contactenos">
+                <ul *ngFor="let sede of sedeSeleccionada?.contactenos"
+                  class="contactenos">
+                  <li>Teléfono: {{sede.telefono}}</li><p></p>
+                  <li>WhatsApp: {{sede.whatsapp}}</li><p></p>
+                  <li>Correo: {{sede.correo}}</li><p></p>
+                  <li>Sede principal: {{sede.sede_principal}}</li><p></p>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--------------------Fin contáctenos con objeto------------------------------------>
+        </div>
+      </div>
+    </section>
+    <!--=====Fin Sección descripción, imagen y contactos sede====-->
+
+    <!--=====Sección carrusel de imágenes instalaciones====-->
+    <p></p>
+    <section class="carrusel-sedes">
+      <p></p>
+      <div class="container">
+        <div class="titulo">
+          <p><strong>{{instalaciones_esp}}{{sedeSeleccionada?.nombre_sede}}</strong>
+          </p>
+        </div>
+      </div>
+      <!--------------------Carrusel de imágenes----------------------------->
+      <div id="carouselExampleControls" data-bs-interval="5000"
+        class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <div *ngFor="let sede of sedeSeleccionada?.instalaciones;
+            let i= index;first as isFirst" class="container">
+            <div [ngClass]="isFirst ? 'carousel-item active' : 'carousel-item' "
+              class="d-flex justify-content-center">
+              <img src="assets/img/carousel_inst_sedes/{{sede}}" class="d-block
+                w-50" width="256px">
+            </div>
+          </div>
+        </div>
+        <!--------Boton para correr imágenes de manera manual-->
+        <button class="carousel-control-prev" type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        
+        <button class="carousel-control-next"
+          type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        <!--------------------Fin carrusel de imágenes----------------------------->
+      </div>
+    </section>
+    <!--=====Fin sección carrusel de imágenes instalaciones====-->
+
+    <!--=====Título servicios sedes====-->
+    <p></p>
+    <div class="container">
+      <div class="titulo">
+        <p><strong>{{services}}</strong>
+        </p>
+      </div>
+    </div>
+    <p></p>
+    <!--=====================Sección sedes especialidades========================-->
+    <section class="serviciosEspecialidades">
+      <div class="container">
+        <div class="titulo_descripcion">{{descripcion_esp}}
+        </div>
+        <p></p>
+        <div class="principal_esp">
+          <div *ngFor="let sede of sedeSeleccionada?.especialidades"
+            class="wrapper">
+            <img src="assets/img/icons/{{sede.icono}}" width="64px"
+              class="ico"><p>
+
+              <!--Si el nombre de servicios es diferente de "otros servicios"-->
+              <button *ngIf="sede.nombre_servicio != 'Otros Servicios'"
+                mat-flat-button
+                routerLink="/servicios/subespecialidades/{{sede.nombre_servicio}}">
+                {{sede.nombre_servicio}}</button>
+
+              <!--Si el nombre de servicios es igual a "otros servicios-->
+              <button *ngIf="sede.nombre_servicio === 'Otros Servicios'"
+                mat-flat-button routerLink="/servicios/especialidades/">{{sede.nombre_servicio}}
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <p></p>
+    <!--=====================Fin sección sedes especialidades========================-->
+
+      <!--=====================Sección sedes procedimientos========================-->
+      <section class="serviciosProcedimientos">
+        <div class="container">
+          <div class="titulo_descripcion">{{descripcion_proc}}
+          </div>
+          <p></p>
+          <div class="principal_proc">
+            <div *ngFor="let sede of sedeSeleccionada?.procedimientos"
+              class="wrapper">
+              <img src="assets/img/icons/{{sede.icono}}" width="64px"
+                class="ico"><p>
+  
+                <!--Si el nombre de servicios es diferente de "otros servicios"-->
+                <button *ngIf="sede.nombre_servicio != 'Otros Servicios'"
+                  mat-flat-button
+                  routerLink="/servicios/subprocedimientos/{{sede.nombre_servicio}}">
+                  {{sede.nombre_servicio}}</button>
+  
+                <!--Si el nombre de servicios es igual a "otros servicios-->
+                <button *ngIf="sede.nombre_servicio === 'Otros Servicios'"
+                  mat-flat-button routerLink="/servicios/procedimientos/">{{sede.nombre_servicio}}
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <p></p>
+      <!--=====================Fin sección sedes procedimientos========================-->
+  </body>

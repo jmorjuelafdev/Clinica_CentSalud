@@ -1,0 +1,95 @@
+<body>
+  <p></p>
+  <!--=====Sección descripción e ícono especialistas====-->
+  <section class="servicios">
+    <div class="container col-lg-12 pt-lg-2">
+      <div class="row">
+        <div class="col-lg-4 pt-lg-5">
+          <aside class="icono-especialidad">
+            <img src="assets/img/icons/{{servicioSeleccionado?.icono}}"
+              width="128px"
+              class="ico"><p>
+              <p class="nombre-icono"><strong>{{servicioSeleccionado?.nombre_servicio}}</strong>
+              </p>
+            </aside>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-4 content aos-init aos-animate">
+            <div class="descripcion">
+              <p>{{servicioSeleccionado?.descripcion}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=====Fin Sección descripción e ícono====-->
+
+    <!--=====Sección carrusel de imágenes especialistas====-->
+    <p></p>
+    <section class="carrusel-especialidades">
+      <p></p>
+      <div class="container">
+        <div class="titulo">
+          <p><strong>{{instalaciones_esp}}{{servicioSeleccionado?.nombre_servicio}}</strong>
+          </p>
+        </div>
+      </div>
+    <!--------------------Carrusel de imágenes----------------------------->
+      <div id="carouselExampleControls" data-bs-interval="5000"
+        class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <div *ngFor="let especialidad of servicioSeleccionado?.instalaciones;
+            let i= index;first as isFirst" class="container">
+            <div [ngClass]="isFirst ? 'carousel-item active' : 'carousel-item' "
+              class="d-flex justify-content-center">
+              <img src="assets/img/carousel_esp/{{especialidad}}" class="d-block
+                w-50" width="256px">
+            </div>
+          </div>
+        </div>
+        <!--------Boton para correr imágenes de manera manual-->
+        <button class="carousel-control-prev" type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next"
+          type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        <!--------------------Fin carrusel de imágenes----------------------------->
+      </div>
+    </section>
+    <!--=====Fin sección carrusel de imágenes====-->
+
+
+    <!--=====Sección sedes especialidades====-->
+    <section class="sedes-especialidades">
+      <p></p>
+      <div class="container">
+        <div class="titulo">
+          <p><strong>{{sedes_esp}}{{servicioSeleccionado?.nombre_servicio}}</strong>
+          </p>
+        </div>
+      </div>
+
+   <!--------------------Galería de imágenes----------------------------->
+    <div class="page-container" style="text-align: center;">
+      <div class="chains">
+          <mat-card *ngFor="let especialidad of servicioSeleccionado?.sedes;" class="mat-elevation-z7">
+            <img mat-card-image src="assets/img/sedes/{{especialidad.icono}}">
+          <mat-card-content>
+            <p>
+              <a routerLink="/subsedes/{{especialidad.nombre_sede}}">{{especialidad.nombre_sede}}</a>
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      </div>
+     <!--------------------Fin galería de imágenes----------------------------->
+    </section>
+    <!--=====Fin Sección sedes especialidades====-->
+  </body>

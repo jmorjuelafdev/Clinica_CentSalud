@@ -1,0 +1,99 @@
+<body>
+  <p></p>
+  <div class="container">
+    <div class="titulo">
+      <p><strong>{{title}}</strong> </p>
+    </div>
+  </div>
+
+  <!-- =======Sección descripción y pie de foto======= -->
+  <section class="descripcion">
+    <div class="container">
+      <div class="container col-lg-6 pt-lg-5"></div>
+      <div *ngFor="let acerca of nosotros" class="row">
+        
+        <div class="container col-lg-5">
+          <img src="assets/img/nosotros/{{acerca.imagen}}" class="img-fluid">
+            <div class="box">{{piedefoto}}</div>
+        </div>
+        <div class="col-lg-7 pt-4 pt-lg-0 content" style="text-align: justify;">
+          <p>{{acerca.descripcion}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- =======Fin Sección descripción y pie de foto=======-->
+
+  <!-- ======= Sección Misión y visión ======= -->
+  <section class="mision_vision">
+    <div class="container">
+      <div class="container col-lg-7 pt-lg-5"></div>
+      <div *ngFor="let acerca of nosotros" class="row">
+        <div class="col-lg-6 pt-4 pt-lg-0 content" style="text-align: justify;">
+          <div class="container">
+            <div class="titulo">
+              <p><strong>{{mision}}</strong> </p>
+            </div>
+          </div>
+          <p>{{acerca.mision}}</p>
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0 content" style="text-align: justify;">
+          <div class="container">
+            <div class="titulo">
+              <p><strong>{{vision}}</strong> </p>
+            </div>
+          </div>
+          <p>{{acerca.vision}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ======= Fin Sección Misión y visión ======= -->
+
+
+  <!-- ======= Sección valores corporativos =========== -->
+  <section class="valores">
+    <div class="container">
+      <div class="container col-lg-7 pt-lg-5"></div>
+      <div class="titulo">
+        <p><strong>{{titulo_valores}}</strong> </p>
+      </div>
+  <!----------------------Descripción------------------------>
+      <div *ngFor="let valor of valores">
+        <div *ngFor="let valor of valor.valores" class="row" id="descripcion">
+          <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12">
+            <p>{{valor.descripcion}}</p>
+          </div>
+  <!----------------------Fin Descripción------------------------>
+
+    <!---------------------Lista de valores------------------------>
+          <div class="col-lg-3 col-md-12 col-sm-6 col-xs-12">
+                <mat-card class="mat-elevation-z7" id="valores">
+                  <mat-list>
+                    <mat-list-item *ngFor="let valor of valor.valores1" class="lista">
+                      <mat-icon matListIcon>check_circle_outline</mat-icon>
+                      {{valor}}
+                    </mat-list-item>
+                  </mat-list>
+                </mat-card>
+              </div>
+  
+          <div class="col-lg-3 col-md-12 col-sm-6 col-xs-12">
+                <mat-card class="mat-elevation-z7" id="valores">
+                  <mat-list>
+                    <mat-list-item *ngFor="let valor of valor.valores2" class="lista">
+                      <mat-icon matListIcon >check_circle_outline</mat-icon>
+                      {{valor}}
+                    </mat-list-item>
+                  </mat-list>
+                </mat-card>
+              </div>
+    <!---------------------Fin Lista de valores------------------------>
+            </div>
+          </div>
+          <div class="container col-lg-7 pt-lg-5"></div>
+        </div>
+  </section>
+  <!-- ======= Fin Sección Valores corporativos ======= -->
+</body>

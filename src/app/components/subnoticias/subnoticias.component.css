@@ -1,0 +1,35 @@
+/***============= Para toda la página================*/
+.titulo {
+  font-size: 36px;
+  text-align: center;
+  color: #72bb53;
+  font-family: Zapf Chancery, cursive;
+  text-shadow: 0px 3px 3px rgba(255,255,255,0.4),0px -1px 1px rgba(0,0,0,0.3);
+}
+/** =======Sección imagenTitular, tituloNoticia, noticia=======*/
+.subtitulo {
+  font-size: 25px;
+  text-align: justify;
+  color: #72bb53;
+  font-family: Zapf Chancery, cursive;
+  text-shadow: 0px 3px 3px rgba(255,255,255,0.4),0px -1px 1px rgba(0,0,0,0.3);
+}
+img {
+  max-width: 100%;
+  min-height: 100%;
+}
+/**==============Sección comentarios=========================*/
+#cuerpo_comentarios {
+  overflow: scroll;
+  height: 200px;
+  width: 1000px;
+  background-color: #F1F8E9;
+}
+textarea {
+  resize: none;
+  height: 10em;
+  width: 1000px;
+}
+#nombre {
+  width: 300px;
+}

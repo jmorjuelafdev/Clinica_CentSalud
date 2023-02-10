@@ -1,0 +1,26 @@
+<!--=====Sección procedimientos inicio ====-->
+<section class="serviciosOfrecidos2">
+  <div class="container">
+    <div *ngFor="let procedimiento of procedimientos" class="titulo">
+      {{procedimiento.descripcion_proc}}
+    </div>
+    <div *ngFor="let procedimiento of procedimientos" class="principal">
+      <div *ngFor="let procedimiento of procedimiento.procedimientos" class="wrapper" >
+        <img src="assets/img/icons/{{procedimiento.icono}}" width="64px"
+            class="ico"><p>
+          <!--Si el nombre de servicios es diferente de "otros servicios"-->
+          <button *ngIf="procedimiento.nombre_servicio != 'Otros Servicios'"
+            mat-flat-button
+            routerLink="/servicios/subprocedimientos/{{procedimiento.nombre_servicio}}">
+            {{procedimiento.nombre_servicio}}</button>
+          <!--Si el nombre de servicios es igual de "otros servicios"-->
+          <button *ngIf="procedimiento.nombre_servicio === 'Otros Servicios'"
+            mat-flat-button routerLink="/servicios/procedimientos">{{procedimiento.nombre_servicio}}
+          </button>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!--=====Fin sección procedimientos inicio ====-->
+<p></p>
