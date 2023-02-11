@@ -1,0 +1,39 @@
+[
+    {
+      "icono": "Noticia1.jpg",
+      "nombre": " La IPS favorita de los Hondanos estrena lugar!",
+      "descripcion_corta": "Para los ciudadanos de Honda, su IPS favorita cambia de ubicación para poder tener más servicios y de mejor calidad.",
+      "fecha": "10 julio del 2021"
+    },
+    {
+      "icono": "Noticia2.jpg",
+      "nombre": "Bienvenido Nueva EPS",
+      "descripcion_corta": "Para los ciudadanos de Honda que tengan Nueva EPS, a partir del 1 de Agosto de 2022 comenzaremos a atenderlos en la IPS favorita.",
+      "fecha": "20 julio del 2022"
+    },
+    {
+      "icono": "Noticia3.jpg",
+      "nombre": "Jornada de vacunación COVID-19",
+      "descripcion_corta": "Para los ciudadanos de Honda, desde el 14 hasta el 20 de Julio de 2021,tendremos punto de vacunación.",
+      "fecha": "10 julio del 2021"
+    },
+    {
+      "icono": "Noticia4.jpg",
+      "nombre": "Nuevo servicio de asignación de citas",
+      "descripcion_corta": "Para los ciudadanos de Honda, a partir del 1 de Agosto de 2022 brindaremos servicio de agendamiento telefónico de citas.",
+      "fecha": "10 julio del 2022"
+    },
+    {
+      "icono": "Noticia5.jpg",
+      "nombre": "Próximamente nuevas sedes",
+      "descripcion_corta": "Proximamente se informará apertura de las nuevas sedes.",
+      "fecha": "10 septiembre del 2022"
+    },
+    {
+      "icono": "Noticia6.jpg",
+      "nombre": "Viruela del mono: ¿qué es y cómo se puede prevenir?",
+      "descripcion_corta": "Adopta las siguientes medidas para prevenir la infección o la trasmisión de la viruela del mono.",
+      "fecha": "10 septiembre del 2022"
+    }
+  ]
+  

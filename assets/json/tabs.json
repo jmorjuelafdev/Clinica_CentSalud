@@ -1,0 +1,98 @@
+[
+  {
+  "tab":"Especialidades",
+  "ruta":"./especialidades",
+    "especialidades": [
+      {
+        "nombre_servicio": "Psicología",
+        "icono": "psicologia.ico"
+      },
+      {
+        "nombre_servicio": "Ginecología",
+        "icono": "ginecologia.ico"
+      },
+      {
+        "nombre_servicio": "Dermatología",
+        "icono": "dermatologia.ico"
+      },
+      {
+        "nombre_servicio": "Pediatría",
+        "icono": "pediatria.ico"
+      },
+      {
+        "nombre_servicio": "Medicina interna",
+        "icono": "interna.ico"
+      },
+      {
+        "nombre_servicio": "Enfermería",
+        "icono": "enfermeria.ico"
+      },
+      {
+        "nombre_servicio": "Cardiología",
+        "icono": "cardiologia.ico"
+      },
+      {
+        "nombre_servicio": "Medicina general",
+        "icono": "medicina.ico"
+      },
+      {
+        "nombre_servicio": "Nutrición",
+        "icono": "nutricion.ico"
+      },
+      {
+        "nombre_servicio": "Vacunación PAI",
+        "icono": "vacunacion.ico"
+      },
+      {
+        "nombre_servicio": "Optometría",
+        "icono": "optometria.ico"
+      },
+      {
+        "nombre_servicio": "Odontología",
+        "icono": "odontologia.ico"
+      },
+      {
+        "nombre_servicio": "Psiquiatría",
+        "icono": "psiquiatria.ico"
+      },
+      {
+        "nombre_servicio": "Otorrinolaringología",
+        "icono": "otorrinolaringologia.ico"
+      }
+    ]
+  },
+  {
+  "tab":"Procedimientos",
+  "ruta":"./procedimientos",
+    "procedimientos": [
+      {
+        "nombre_servicio": "Ecocardiogramas",
+        "icono": "ecocardiograma.ico"
+      },
+      {
+        "nombre_servicio": "Terapias físicas",
+        "icono": "fisioterapia.ico"
+      },
+      {
+        "nombre_servicio": "Electrocardiogramas",
+        "icono": "electrocardiograma.ico"
+      },
+      {
+        "nombre_servicio": "Ecografías",
+        "icono": "ecografia.ico"
+      },
+      {
+        "nombre_servicio": "Rayos X",
+        "icono": "rayosx.ico"
+      },
+      {
+        "nombre_servicio": "Holter",
+        "icono": "holter.ico"
+      },
+      {
+        "nombre_servicio": "Espirometría",
+        "icono": "espirometria.ico"
+      }
+    ]
+  }
+  ]
